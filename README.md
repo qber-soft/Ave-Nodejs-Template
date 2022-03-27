@@ -10,17 +10,19 @@
 
  </div>
  
-# 简介
+# Introduction
 
-这是Ave UI库的模板项目，用于快速进行开发。
+This is the template project of Ave.
 
-## 开发
+Docs: [https://qber-soft.github.io/Ave-Nodejs-Docs/](https://qber-soft.github.io/Ave-Nodejs-Docs/)
+
+## Dev
 
 ```bash
 > npm install
 > npm run dev
 ```
 
-## 开源协议
+## License
 
 [MIT](./LICENSE)
