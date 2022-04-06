@@ -23,6 +23,12 @@ Docs: [https://qber-soft.github.io/Ave-Nodejs-Docs/](https://qber-soft.github.io
 > npm run dev
 ```
 
+## Package
+
+```bash
+> npm run release
+```
+
 ## License
 
 [MIT](./LICENSE)
