@@ -4,7 +4,7 @@
   "description": "quick start for ave-ui",
   "main": "src/index.js",
   "scripts": {
-    "dev": "tsnd --respawn --transpile-only ./src/index.ts",
+    "dev": "tsnd --respawn ./src/index.ts",
     "build": "tsc",
     "prerelease": "npm run build",
     "release": "ave-pack pack"
