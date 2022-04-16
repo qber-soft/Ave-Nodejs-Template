@@ -1,4 +1,5 @@
 import { App, WindowCreation, Window, WindowFlag, Grid, Button } from 'ave-ui';
+import * as path from "path";
 
 export function main(window: Window) {
     const button = new Button(window);
@@ -17,17 +18,24 @@ run(main);
 
 export function run(main: Function) {
     const app = new App();
+
+    const iconDataMap = {
+        WindowIcon: [path.resolve(__dirname, "../assets/Ave#0.png"), path.resolve(__dirname, "../assets/Ave#1.png"), path.resolve(__dirname, "../assets/Ave#2.png")],
+    };
+    const resMap = app.CreateResourceMap(app, [16, 24, 32], iconDataMap);
+
     globalThis.app = app;
 
     //
     const cpWindow = new WindowCreation();
-    cpWindow.Title = 'Window';
+    cpWindow.Title = 'Ave Template';
     cpWindow.Flag |= WindowFlag.Layered;
 
     const window = new Window(cpWindow);
     globalThis._window = window;
 
-    window.OnCreateContent(sender => {
+    window.OnCreateContent(window => {
+        window.SetIcon(resMap.WindowIcon);
         main(window);
         return true
     })

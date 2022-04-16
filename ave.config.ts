@@ -4,7 +4,7 @@ const config: IPackConfig = {
   build: {
     projectRoot: __dirname,
     target: "node14-win-x64",
-    input: "./build/index.js",
+    input: "./build/src/index.js",
     output: "./bin/ave-app.exe",
   },
   resource: {
