@@ -1,15 +1,17 @@
-import { App, WindowCreation, Window, WindowFlag, Grid, Vec4, AveGetSDKVersion } from 'ave-ui';
+import { App, WindowCreation, Window, WindowFlag, Grid, Button } from 'ave-ui';
 import * as path from "path";
 
 export function main(window: Window) {
-    const grid = new Grid(window);
-	const lightBlue = new Vec4(0, 146, 255, 255 * 0.75);
-	grid.SetBackColor(lightBlue);
+    const button = new Button(window);
+    button.SetText("Button");
+    button.OnClick(sender => {
+        sender.SetText("Button Clicked");
+        console.log("button clicked");
+    });
 
-	//
-	const version = AveGetSDKVersion();
-	console.log(`ave sdk version: ${JSON.stringify(version.VersionString, null, 4)}, is private: ${version.IsPrivateVersion}`);
-	window.SetContent(grid);
+    const container = get3x3Grid(window);
+    container.ControlAdd(button).SetGrid(1, 1)
+    window.SetContent(container);
 }
 
 run(main);
