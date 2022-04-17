@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "dev": "tsnd --respawn ./src/index.ts",
+    "dev:button": "tsnd --respawn ./src/button.ts",
     "prebuild": "del-cli ./build",
     "build": "tsc",
     "postbuild": "copyfiles ./assets/* ./build",
