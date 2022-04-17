@@ -20,7 +20,9 @@ Docs: [https://qber-soft.github.io/Ave-Nodejs-Docs/](https://qber-soft.github.io
 
 ```bash
 > npm install
-> npm run dev
+> npm run dev 
+# or
+> npm run dev:button
 ```
 
 ## Package
